@@ -1,6 +1,10 @@
 function greetPeople(people) {
   var greeting = "Hello ";
 
+  if (!Array.isArray(people)) {
+    throw new Error('Invalid data type')
+  }
+
   people.forEach(function(person) {
     greeting = greeting + person;
   });
